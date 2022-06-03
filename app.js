@@ -24,18 +24,33 @@ if(port == null || port == ""){
 }
 
 app.listen(port,function(req,res){
-    console.log("Server is running at port 5000");
+    console.log("Server is running at port "+port);
 });
 
 app.get("/",function(req,res){
+    let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    let ua = req.headers['user-agent'].toLowerCase();
+    console.log("IP : "+ip);
+    console.log("User agent : "+ua);
+    
     res.render("home");
 });
 
 app.get("/resume",function(req,res){
+    let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    let ua = req.headers['user-agent'].toLowerCase();
+    console.log("IP : "+ip);
+    console.log("User agent : "+ua);
+
     res.sendFile(__dirname+"/public/pdfs/Tuhin Subhra Hazra_Resume.pdf");
 });
 
 app.get("/dfd-medicine",function(req,res){
+    let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    let ua = req.headers['user-agent'].toLowerCase();
+    console.log("IP : "+ip);
+    console.log("User agent : "+ua);
+
     res.sendFile(__dirname+"/public/pdfs/Medecine Shop Management System Project.pdf");
 });
 
