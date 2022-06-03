@@ -13,7 +13,9 @@ mongoose.connect("mongodb+srv://tuhin1010:Pf2EzKF0rGBNZjJ3@cluster0.qii1s.mongod
 let MessageSchema = mongoose.Schema({
     name:String,
     email:String,
-    message:String
+    message:String,
+    ip:String,
+    ua:String
 });
 
 let messageModel = mongoose.model("Massage",MessageSchema);
@@ -67,6 +69,8 @@ app.get("/msg1010",function(req,res){
 });
 
 app.post("/send-msg",function(req,res){
+    let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    let ua = req.headers['user-agent'].toLowerCase();
     let name = req.body.name;
     let email = req.body.email;
     let msg = req.body.msg;
@@ -74,7 +78,9 @@ app.post("/send-msg",function(req,res){
     let usrMsg = new messageModel({
         name : name,
         email : email,
-        message : msg
+        message : msg,
+        ip : ip,
+        ua : ua
     }).save();
 
     res.redirect("/");
