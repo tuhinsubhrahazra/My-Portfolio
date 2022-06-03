@@ -612,6 +612,10 @@ p{
     transition: all 0.3s ease-in-out;
 }
 
+.project-container p{
+    margin-right: 0;
+}
+
 .project-container:hover{
     box-shadow: 0 3px 15px blue;
     transform: scale(1.1);

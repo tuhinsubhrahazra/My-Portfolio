@@ -18,7 +18,14 @@ let MessageSchema = mongoose.Schema({
     ua:String
 });
 
+let userSchema = mongoose.Schema({
+    ip : String,
+    ua : String
+});
+
 let messageModel = mongoose.model("Massage",MessageSchema);
+
+let userModel = mongoose.model("User",userSchema);
 
 let port = process.env.PORT;
 if(port == null || port == ""){
@@ -34,6 +41,21 @@ app.get("/",function(req,res){
     let ua = req.headers['user-agent'].toLowerCase();
     console.log("IP : "+ip);
     console.log("User agent : "+ua);
+
+    userModel.findOne({ip:ip},function(err,data){
+        if(!err){
+            if(data==null){
+                let doc = new userModel({
+                    ip : ip,
+                    ua : ua
+                });
+
+                doc.save(function(err){
+                    if(!err) console.log("New user saved");
+                })
+            }
+        }
+    });
     
     res.render("home");
 });
@@ -66,6 +88,18 @@ app.get("/msg1010",function(req,res){
             console.log(err);
         }
     })
+});
+
+app.get("/users1010",function(req,res){
+    userModel.find(function(err,data){
+        if(!err){
+            console.log(data);
+            res.send(data);
+        }
+        else{
+            console.log(err);
+        }
+    });
 });
 
 app.post("/send-msg",function(req,res){
