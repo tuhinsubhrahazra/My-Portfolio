@@ -153,7 +153,7 @@ p{
 }
 
 .sidePannel{
-    /* display: none; */
+    display: none;
     background-color: white;
     width: 50%;
     height: 100%;
@@ -175,12 +175,6 @@ p{
     margin-bottom: 20px;
 }
 
-.hide{
-    animation: rightToleft;
-    animation-duration: 0.5s;
-    display: none;
-}
-
 @keyframes rightToleft {
     0% {
       left: 0px;
@@ -188,12 +182,6 @@ p{
     100%{
         left: -500px;
     }
-}
-
-.show{
-    display: block;
-    animation: run;
-    animation-duration: 0.5s;
 }
 
 .menu{

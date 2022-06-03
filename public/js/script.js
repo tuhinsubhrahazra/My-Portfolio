@@ -532,18 +532,15 @@ window.addEventListener('scroll',function(){
 
 // for 3 line button
 
-document.querySelector(".sidePannel").classList.add("hide");
 document.querySelector("#line3").addEventListener("click",function(){
-    document.querySelector(".sidePannel").classList.remove("hide");
-    document.querySelector(".sidePannel").classList.add("show");
+    document.querySelector(".sidePannel").style.display = "block";
+    document.querySelector(".sidePannel").style.animation = "run 0.5s";
 });
 
 document.querySelector("#x").addEventListener("click",function(){
-    document.querySelector(".sidePannel").classList.remove("show");
-    document.querySelector(".sidePannel").classList.add("hide");
+    document.querySelector(".sidePannel").style.display = "none";
 });
 
 document.querySelector(".menu").addEventListener("click",function(){
-    document.querySelector(".sidePannel").classList.remove("show");
-    document.querySelector(".sidePannel").classList.add("hide");
+    document.querySelector(".sidePannel").style.display = "none";
 });
