@@ -795,6 +795,10 @@ p{
     position: absolute;
 }
 
+.brr{
+    display: none;
+}
+
 @media (min-width: 1025px){
     .sidePannel{
         display: none;
@@ -935,5 +939,44 @@ p{
         height: 40px;
         right: 15px;
         margin-top: 40px;
+    }
+}
+
+@media (max-width: 350px){
+    .home-button img{
+        width: 40px;
+    }
+    .about-right_sec h1{
+        /* text-align: center; */
+        /* font-size: 10px; */
+    }
+    .about-mid{
+        padding: 0;
+    }
+    .pic{
+        width: 200px;
+    }
+    .abt{
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    .about-right_sec table{
+        font-size: 10px;
+    }
+    .about-right_sec table tr td p{
+        margin-left: 10px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    .brr{
+        display: block;
+    }
+    .project-container{
+        width: 200px;
+    }
+    #projects button{
+        font-size: 10px;
     }
 }
