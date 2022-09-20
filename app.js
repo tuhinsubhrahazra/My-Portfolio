@@ -119,3 +119,8 @@ app.post("/send-msg",function(req,res){
 
     res.redirect("/");
 });
+
+
+app.get("/:urlName",function(req,res){
+    res.render("pagenotfound");
+});
