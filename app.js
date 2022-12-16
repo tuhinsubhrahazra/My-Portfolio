@@ -2,13 +2,15 @@ const express = require("express");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-
+const MONGO_URI = 'mongodb+srv://tuhin1010:Pf2EzKF0rGBNZjJ3@cluster0.qii1s.mongodb.net/MessageDB';
 const app = express();
 app.set("view engine","ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 
-mongoose.connect("mongodb+srv://tuhin1010:Pf2EzKF0rGBNZjJ3@cluster0.qii1s.mongodb.net/MessageDB");
+mongoose.connect(MONGO_URI, () => {
+    console.log("MongoDB successfully connected.");
+});
 
 let MessageSchema = mongoose.Schema({
     name:String,
@@ -81,7 +83,6 @@ app.get("/dfd-medicine",function(req,res){
 app.get("/msg1010",function(req,res){
     messageModel.find(function(err,data){
         if(!err){
-            console.log(data);
             res.send(data);
         }
         else{
@@ -93,7 +94,6 @@ app.get("/msg1010",function(req,res){
 app.get("/users1010",function(req,res){
     userModel.find(function(err,data){
         if(!err){
-            console.log(data);
             res.send(data);
         }
         else{
