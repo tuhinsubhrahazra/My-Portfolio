@@ -579,6 +579,36 @@ p{
     transition: all 1s ease-in-out;
 }
 
+.sBtn14{
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all 1s ease-in-out;
+}
+
+.sBtn15{
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all 1s ease-in-out;
+}
+
+.sBtn16{
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all 1s ease-in-out;
+}
+
+.sBtn17{
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all 1s ease-in-out;
+}
+
+.sBtn18{
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all 1s ease-in-out;
+}
+
 .active{
     opacity: 1;
     transform: scale(1);
