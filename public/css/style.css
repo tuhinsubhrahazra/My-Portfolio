@@ -329,6 +329,10 @@ p{
 
 }
 
+#project-desp{
+    text-align:left;
+}
+
 .project_underLine{
     height: 4px;
     width: 0%;
