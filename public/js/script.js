@@ -124,6 +124,11 @@ window.addEventListener('scroll',function(){
     let sBtn11 = this.document.querySelector(".sBtn11");
     let sBtn12 = this.document.querySelector(".sBtn12");
     let sBtn13 = this.document.querySelector(".sBtn13");
+    let sBtn14 = this.document.querySelector(".sBtn14");
+    let sBtn15 = this.document.querySelector(".sBtn15");
+    let sBtn16 = this.document.querySelector(".sBtn16");
+    let sBtn17 = this.document.querySelector(".sBtn17");
+    let sBtn18 = this.document.querySelector(".sBtn18");
 
     let pc1 = this.document.querySelector("#prcn1");
     let pc2 = this.document.querySelector("#prcn2");
@@ -247,6 +252,41 @@ window.addEventListener('scroll',function(){
     }
     else{
         sBtn13.classList.remove("active");
+    }
+
+    if(sBtn14.getBoundingClientRect().top < screenPos){
+        sBtn14.classList.add("active");
+    }
+    else{
+        sBtn14.classList.remove("active");
+    }
+
+    if(sBtn15.getBoundingClientRect().top < screenPos){
+        sBtn15.classList.add("active");
+    }
+    else{
+        sBtn15.classList.remove("active");
+    }
+
+    if(sBtn16.getBoundingClientRect().top < screenPos){
+        sBtn16.classList.add("active");
+    }
+    else{
+        sBtn16.classList.remove("active");
+    }
+
+    if(sBtn17.getBoundingClientRect().top < screenPos){
+        sBtn17.classList.add("active");
+    }
+    else{
+        sBtn17.classList.remove("active");
+    }
+
+    if(sBtn18.getBoundingClientRect().top < screenPos){
+        sBtn18.classList.add("active");
+    }
+    else{
+        sBtn18.classList.remove("active");
     }
     
     // About section 
