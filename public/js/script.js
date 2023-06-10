@@ -139,6 +139,8 @@ window.addEventListener('scroll',function(){
     let pc12 = this.document.querySelector("#prcn12");
     let pc13 = this.document.querySelector("#prcn13");
     let pc14 = this.document.querySelector("#prcn14");
+    let pc15 = this.document.querySelector("#prcn15");
+    let pc16 = this.document.querySelector("#prcn16");
     
     let animate = this.document.querySelector(".animate");
     let animate_1 = this.document.querySelector(".animate-1");
@@ -441,6 +443,25 @@ window.addEventListener('scroll',function(){
         pc14.classList.remove('animation1');
         pc14.classList.add('animation0');
     }
+
+    if(pc15.getBoundingClientRect().top < screenPos){
+        pc15.classList.remove('animation0');
+        pc15.classList.add('animation1');
+    }
+    else{
+        pc15.classList.remove('animation1');
+        pc15.classList.add('animation0');
+    }
+
+    if(pc16.getBoundingClientRect().top < screenPos){
+        pc16.classList.remove('animation0');
+        pc16.classList.add('animation1');
+    }
+    else{
+        pc16.classList.remove('animation1');
+        pc16.classList.add('animation0');
+    }
+
 
     // Contact section
 
