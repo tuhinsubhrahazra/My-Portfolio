@@ -68,7 +68,7 @@ app.get("/resume",function(req,res){
     console.log("IP : "+ip);
     console.log("User agent : "+ua);
 
-    res.sendFile(__dirname+"/public/pdfs/Tuhin Subhra Hazra_Resume.pdf");
+    res.sendFile(__dirname+"/public/pdfs/Tuhin Subhra Hazra.pdf");
 });
 
 app.get("/dfd-medicine",function(req,res){
