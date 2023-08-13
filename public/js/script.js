@@ -5,12 +5,14 @@
 
 let arr = [];
 arr.push("Tuhin Subhra Hazra");
-arr.push("a Student Of IT");
-arr.push("Studing in CEMK");
+arr.push("a Software Developer");
+// arr.push("Junion Software Developer");
 
 let i = -1;
 let j = 0;
+
 autoType();
+
 function autoType() {
     if (i++ < arr[j].length) {
         document.getElementById("text").innerHTML += arr[j].charAt(i);
@@ -29,7 +31,7 @@ function autoslice() {
     else {
         j++;
         setTimeout(autoType, 500);
-        if (j == 3) j = 0;
+        if (j == arr.length) j = 0;
     }
 }
 
@@ -129,6 +131,8 @@ window.addEventListener('scroll',function(){
     let sBtn16 = this.document.querySelector(".sBtn16");
     let sBtn17 = this.document.querySelector(".sBtn17");
     let sBtn18 = this.document.querySelector(".sBtn18");
+    let sBtn19 = this.document.querySelector(".sBtn19");
+    let sBtn20 = this.document.querySelector(".sBtn20");
 
     let pc1 = this.document.querySelector("#prcn1");
     let pc2 = this.document.querySelector("#prcn2");
@@ -146,6 +150,8 @@ window.addEventListener('scroll',function(){
     let pc14 = this.document.querySelector("#prcn14");
     let pc15 = this.document.querySelector("#prcn15");
     let pc16 = this.document.querySelector("#prcn16");
+    let pc17 = this.document.querySelector("#prcn17");
+    let pc18 = this.document.querySelector("#prcn18");
     
     let animate = this.document.querySelector(".animate");
     let animate_1 = this.document.querySelector(".animate-1");
@@ -287,6 +293,20 @@ window.addEventListener('scroll',function(){
     }
     else{
         sBtn18.classList.remove("active");
+    }
+
+    if(sBtn19.getBoundingClientRect().top < screenPos){
+        sBtn19.classList.add("active");
+    }
+    else{
+        sBtn19.classList.remove("active");
+    }
+    
+    if(sBtn20.getBoundingClientRect().top < screenPos){
+        sBtn20.classList.add("active");
+    }
+    else{
+        sBtn20.classList.remove("active");
     }
     
     // About section 
@@ -500,6 +520,24 @@ window.addEventListener('scroll',function(){
     else{
         pc16.classList.remove('animation1');
         pc16.classList.add('animation0');
+    }
+
+    if(pc17.getBoundingClientRect().top < screenPos){
+        pc17.classList.remove('animation0');
+        pc17.classList.add('animation1');
+    }
+    else{
+        pc17.classList.remove('animation1');
+        pc17.classList.add('animation0');
+    }
+
+    if(pc18.getBoundingClientRect().top < screenPos){
+        pc18.classList.remove('animation0');
+        pc18.classList.add('animation1');
+    }
+    else{
+        pc18.classList.remove('animation1');
+        pc18.classList.add('animation0');
     }
 
 

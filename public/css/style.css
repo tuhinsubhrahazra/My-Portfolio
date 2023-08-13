@@ -389,12 +389,14 @@ p{
     display: flex;
     font-family: "Poppins", Arial, sans-serif;
     margin: auto;
+    /* margin-left: 100px;
+    margin-right: 100px; */
     width: fit-content;
 }
 
 .pic{
-    width: 400px;
-    margin-top: 50px;
+    width: 350px;
+    margin-top: 0px;
     /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.637); */
     box-shadow: 0 3px 15px blueviolet;
 }
@@ -604,6 +606,18 @@ p{
 }
 
 .sBtn18{
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all 1s ease-in-out;
+}
+
+.sBtn19{
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all 1s ease-in-out;
+}
+
+.sBtn20{
     opacity: 0;
     transform: scale(0.6);
     transition: all 1s ease-in-out;
