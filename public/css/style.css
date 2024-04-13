@@ -392,10 +392,12 @@ p{
     /* margin-left: 100px;
     margin-right: 100px; */
     width: fit-content;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .pic{
-    width: 350px;
+    width: 400px;
     margin-top: 0px;
     /* box-shadow: 0 3px 10px rgba(0, 0, 0, 0.637); */
     box-shadow: 0 3px 15px blueviolet;
@@ -857,6 +859,12 @@ p{
     .animate3{
         display: block;
     }
+    .about-mid{
+        padding: 0;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    
 }
 
 @media (max-width: 1024px){
@@ -866,6 +874,11 @@ p{
         height: 100%;
         width: 100%;
         margin: 0 auto;
+    }
+    .about-mid{
+        padding: 0;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     #projects button{
         width: fit-content;
@@ -1000,6 +1013,8 @@ p{
     }
     .about-mid{
         padding: 0;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .pic{
         width: 200px;
