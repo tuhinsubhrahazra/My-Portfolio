@@ -7,6 +7,9 @@
     "test": "nodemon app.js",
     "start": "node app.js"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "author": "Tuhin Subhra Hazra",
   "license": "ISC",
   "dependencies": {
