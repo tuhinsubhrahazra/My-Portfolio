@@ -582,13 +582,15 @@ window.addEventListener('scroll',function(){
         contact_btn3.classList.remove("active_contact_btn");
     }
 
-    if(cinput.getBoundingClientRect().top < screenPos){
-        cinput.classList.remove('animation2');
-        cinput.classList.add('animation3');
-    }
-    else{
-        cinput.classList.remove('animation3');
-        cinput.classList.add('animation2');
+    if(cinput){
+        if(cinput.getBoundingClientRect().top < screenPos){
+            cinput.classList.remove('animation2');
+            cinput.classList.add('animation3');
+        }
+        else{
+            cinput.classList.remove('animation3');
+            cinput.classList.add('animation2');
+        }
     }
 
     // Other
@@ -649,6 +651,8 @@ window.addEventListener('scroll',function(){
 
 });
 
+window.dispatchEvent(new Event('scroll'));
+
 // for 3 line button
 
 document.querySelector("#line3").addEventListener("click",function(){
@@ -662,4 +666,19 @@ document.querySelector("#x").addEventListener("click",function(){
 
 document.querySelector(".menu").addEventListener("click",function(){
     document.querySelector(".sidePannel").style.display = "none";
+});
+
+document.querySelector("#contact-submit").addEventListener("click", function() {
+    const name = document.querySelector("#name-section").value.trim();
+    const email = document.querySelector("#email-section").value.trim();
+    const msg = document.querySelector("#msg-section").value.trim();
+    if (!name || !email || !msg) {
+        alert("Please fill in all fields before sending.");
+        return;
+    }
+
+    const text = `Hello, my name is ${name}.\nEmail: ${email}.\nMessage: ${msg}`;
+    const phone = "918509939156";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
 });

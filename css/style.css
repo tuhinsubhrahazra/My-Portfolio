@@ -15,7 +15,7 @@ p{
 }
 
 #home{
-    background: url("/images/robo1.png");
+    background: url("../images/robo1.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -959,7 +959,7 @@ p{
         padding-right: 5px;
     }
     #home{
-        background: url("/images/robo.png");
+        background: url("../images/robo.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
